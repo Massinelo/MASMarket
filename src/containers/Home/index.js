@@ -11,7 +11,7 @@ const Home = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await axios.get('http://localhost:3027/offers');
+      const response = await axios.get(`${process.env.REACT_APP_URL}/offers`);
       // console.log(response);
       setData(response.data);
       setIsLoading(false);

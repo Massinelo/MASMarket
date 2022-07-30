@@ -30,7 +30,7 @@ const Publish = ({ token }) => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     const response = await axios.post(
-      'http://localhost:3027/offer/publish',
+      `${process.env.REACT_APP_URL}/offer/publish`,
       formData,
       {
         headers: {

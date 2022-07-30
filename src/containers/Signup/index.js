@@ -13,11 +13,14 @@ const Signup = ({ setUser }) => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      const response = await axios.post('http://localhost:3027/users/signup', {
-        username: username,
-        email: email,
-        password: password,
-      });
+      const response = await axios.post(
+        `${process.env.REACT_APP_URL}/users/signup`,
+        {
+          username: username,
+          email: email,
+          password: password,
+        }
+      );
       // console.log(response.data.token);  La reponse du serveur avec un clé token si tout va bien
       if (response.data.token) {
         setUser(response.data.token);

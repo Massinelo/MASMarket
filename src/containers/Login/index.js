@@ -23,10 +23,13 @@ const Login = ({ setUser }) => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      const response = await axios.post('http://localhost:3027/users/login', {
-        email: email,
-        password: password,
-      });
+      const response = await axios.post(
+        `${process.env.REACT_APP_URL}/users/login`,
+        {
+          email: email,
+          password: password,
+        }
+      );
       // si le server renvoi un token on utilise la fameuse fonction setUser sinon on affiche "Une erreur est survenue"
       if (response.data.token) {
         setUser(response.data.token);
