@@ -1,0 +1,81 @@
+.signup-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.signup-container h2 {
+  font-family: 'Maison Neue';
+  font-weight: lighter;
+}
+
+/* formulaire */
+
+.signup-form {
+  display: flex;
+  width: 275px;
+  margin: auto;
+  flex-direction: column;
+}
+
+.signup-form input {
+  border: none;
+  border-bottom: 1px solid #fcced3;
+  height: 35px;
+  margin-bottom: 20px;
+  outline: none;
+}
+
+.signup-form input::placeholder {
+  color: #cbcccd;
+  font-size: 16px;
+}
+
+/* Checkbox */
+
+.checkbox {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.checkbox-container input {
+  transform: scale(2);
+  margin-top: 20px;
+}
+
+.checkbox-container label {
+  color: #666;
+}
+
+.checkbox-container p {
+  font-size: 12px;
+  color: #999;
+  text-align: left;
+}
+
+/* Bouton */
+
+.signup-button {
+  background-color: #2cb1ba;
+  height: 45px;
+  width: 100%;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-family: 'Maison Neue';
+  cursor: pointer;
+}
+
+.signup-container a {
+  color: #2cb1ba;
+  font-size: 12px;
+  text-decoration: none;
+  margin-top: 10px;
+}

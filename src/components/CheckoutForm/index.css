@@ -1,0 +1,59 @@
+.payment-body {
+  position: absolute;
+  background-color: #eaedee;
+  height: 100vh;
+  width: 100%;
+}
+
+.payment-box {
+  height: 555px;
+  width: 600px;
+  background-color: white;
+  margin: 36px auto;
+  padding: 20px;
+  font-family: 'Maison Neue';
+}
+
+/* Stripe input */
+
+.StripeElement {
+  display: block;
+  margin: 10px 0 20px 0;
+  padding: 10px 14px;
+  font-size: 1em;
+  font-family: 'Source Code Pro', monospace;
+  box-shadow: rgba(50, 50, 93, 0.14902) 0px 1px 3px,
+    rgba(0, 0, 0, 0.0196078) 0px 1px 0px;
+  border: 0;
+  outline: 0;
+  border-radius: 4px;
+  background: white;
+}
+
+/* Payment button */
+.valider-payment {
+  margin-top: 8px;
+  display: block;
+  width: 100%;
+  font-size: 16px;
+  line-height: 22px;
+  height: 44px;
+  padding: 0 14px;
+  color: #fff;
+  border: 1px solid;
+  border-radius: 4px;
+  font-family: 'Maison Neue';
+  background: #00c06d;
+  border-color: #00c06d;
+  cursor: pointer;
+}
+
+.valider-payment:hover {
+  background: #00bb6a;
+  border-color: #00bb6a;
+}
+
+.valider-payment:active {
+  background: #01b165;
+  border-color: #01b165;
+}

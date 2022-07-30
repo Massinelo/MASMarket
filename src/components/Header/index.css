@@ -1,0 +1,98 @@
+.header {
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper {
+  width: 1280px;
+  margin: 0 auto;
+}
+
+.header-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* logo */
+.wrapper img {
+  width: 90px;
+  height: 40px;
+}
+/* search input */
+.search-div {
+  position: relative;
+}
+
+.search-input {
+  width: 590px;
+  padding-left: 40px;
+  background-color: #f5f6f7;
+  border-radius: 5px;
+  height: 37px;
+  border: none;
+  outline: none;
+  font-family: 'Maison Neue';
+  font-size: 16px;
+}
+
+.search-input::placeholder {
+  color: #cbcccd;
+  font-size: 16px;
+}
+
+.header-search-icon {
+  color: #bbbbbb;
+  position: absolute;
+  left: 7px;
+  top: 12px;
+}
+
+/* Button */
+
+.header-button {
+  display: flex;
+}
+
+.logout {
+  height: 30px;
+  border-radius: 5px;
+  font-family: 'Maison Neue';
+  font-size: 12px;
+  outline: none;
+  border: none;
+  background-color: #c2175b;
+  color: white;
+  margin-right: 100px;
+  cursor: pointer;
+}
+
+.button {
+  height: 30px;
+  width: 115px;
+  border: 1px solid #2cb1ba;
+  background-color: white;
+  margin-right: 22px;
+  font-family: 'Maison Neue';
+  font-size: 12px;
+  outline: none;
+  cursor: pointer;
+  border-radius: 5px;
+  color: #2cb1ba;
+}
+
+.vends {
+  height: 30px;
+  width: 115px;
+  border: 1px solid #2cb1ba;
+  background-color: #2cb1ba;
+  color: white;
+  margin-left: ;
+  font-family: 'Maison Neue';
+  font-size: 12px;
+  outline: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
