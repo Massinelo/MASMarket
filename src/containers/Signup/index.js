@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './index.css';
-import { Link, useHistory } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
 const Signup = ({ setUser }) => {
@@ -8,7 +8,7 @@ const Signup = ({ setUser }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  const history = useHistory();
+  const navigate = useNavigate();
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -25,7 +25,7 @@ const Signup = ({ setUser }) => {
       if (response.data.token) {
         setUser(response.data.token);
         // renvoie vers Home cad => "/"
-        history.push('/');
+        navigate('/');
       } else {
         alert('Une erreur est survenue');
       }

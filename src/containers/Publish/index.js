@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './index.css';
 import axios from 'axios';
-import { Redirect, useHistory } from 'react-router-dom';
+import { Navigate, useNavigate } from 'react-router-dom';
 
 const Publish = ({ token }) => {
   const [picture, setPicture] = useState();
@@ -15,7 +15,7 @@ const Publish = ({ token }) => {
   const [city, setCity] = useState('');
   const [price, setPrice] = useState('');
 
-  const history = useHistory();
+  const navigate = useNavigate();
   const formData = new FormData();
   formData.append('picture', picture);
   formData.append('title', title);
@@ -41,7 +41,7 @@ const Publish = ({ token }) => {
     // console.log(response.data);
     if (response.data._id) {
       // redirectoin vers l'offre
-      history.push(`/offer/${response.data._id}`);
+      navigate(`/offer/${response.data._id}`);
     } else {
       alert('Une erreur est survenue, veuillez réssayer');
     }
@@ -195,7 +195,7 @@ const Publish = ({ token }) => {
       </div>
     </div>
   ) : (
-    <Redirect to={{ pathname: '/login', state: { fromPublish: true } }} />
+    <Navigate to={{ pathname: '/login', state: { fromPublish: true } }} />
   );
 };
 

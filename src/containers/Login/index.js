@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import './index.css';
-import { Link, useHistory, useLocation } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import axios from 'axios';
 
 const Login = ({ setUser }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  const history = useHistory();
+  const navigate = useNavigate();
   const location = useLocation();
 
   let fromPublish;
@@ -34,7 +34,7 @@ const Login = ({ setUser }) => {
       if (response.data.token) {
         setUser(response.data.token);
 
-        history.push(fromPublish ? '/publish' : '/');
+        navigate(fromPublish ? '/publish' : '/');
       } else {
         alert('Une erreur est survenue');
       }

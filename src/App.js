@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Cookie from 'js-cookie';
 //import des composants (containers) :
 import Home from './containers/Home';
@@ -47,26 +47,14 @@ function App() {
     <div>
       <Router>
         <Header token={token} setUser={setUser} />
-        <Switch>
-          <Route path="/login">
-            <Login setUser={setUser} />
-          </Route>
-          <Route path="/signup">
-            <Signup setUser={setUser} />
-          </Route>
-          <Route path="/offer/:id">
-            <Offer />
-          </Route>
-          <Route path="/publish">
-            <Publish token={token} />
-          </Route>
-          <Route path="/payment">
-            <Payment />
-          </Route>
-          <Route path="/">
-            <Home />
-          </Route>
-        </Switch>
+        <Routes>
+          <Route path="/login" element={<Login setUser={setUser} />} />
+          <Route path="/signup" element={<Signup setUser={setUser} />} />
+          <Route path="/offer/:id" element={<Offer />} />
+          <Route path="/publish" element={<Publish token={token} />} />
+          <Route path="/payment" element={<Payment />} />
+          <Route path="/" element={<Home />} />
+        </Routes>
       </Router>
     </div>
   );
