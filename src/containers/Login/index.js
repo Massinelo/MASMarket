@@ -10,6 +10,7 @@ const Login = ({ setUser }) => {
   const navigate = useNavigate();
   const location = useLocation();
 
+  console.log(location);
   let fromPublish;
   if (location.state) {
     fromPublish = true;

@@ -9,6 +9,8 @@ const stripePromise = loadStripe('pk_test_5z9rSB8XwuAOihoBixCMfL6X');
 
 const Payment = () => {
   const location = useLocation();
+  console.log(location);
+
   // On destructure les données qui viennent d'Offer
   const { title, price } = location.state;
   return (
